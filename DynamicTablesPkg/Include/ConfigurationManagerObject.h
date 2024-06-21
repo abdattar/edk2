@@ -1,6 +1,7 @@
 /** @file
 
   Copyright (c) 2017 - 2024, Arm Limited. All rights reserved.
+  Copyright (C) 2024 Advanced Micro Devices, Inc. All rights reserved.
 
   SPDX-License-Identifier: BSD-2-Clause-Patent
 
@@ -83,6 +84,7 @@ typedef enum ObjectNameSpaceID {
   EObjNameSpaceStandard,          ///< Standard Objects Namespace
   EObjNameSpaceArchCommon,        ///< Arch Common Objects Namespace
   EObjNameSpaceArm,               ///< ARM Objects Namespace
+  EObjNameSpaceX64,               ///< X64 Objects Namespace
   EObjNameSpaceOem = 0xF,         ///< OEM Objects Namespace
   EObjNameSpaceMax,
 } EOBJECT_NAMESPACE_ID;
@@ -157,6 +159,16 @@ typedef struct CmObjDescriptor {
 **/
 #define CREATE_CM_ARM_OBJECT_ID(ObjectId) \
           (CREATE_CM_OBJECT_ID (EObjNameSpaceArm, ObjectId))
+
+/** This macro returns a Configuration Manager Object ID
+    in the X64 Object Namespace.
+
+  @param [in] ObjectId    The Object ID.
+
+  @retval Returns an X64 Configuration Manager Object ID.
+**/
+#define CREATE_CM_X64_OBJECT_ID(ObjectId) \
+          (CREATE_CM_OBJECT_ID (EObjNameSpaceX64, ObjectId))
 
 /** This macro returns a Configuration Manager Object ID
     in the Arch Common Object Namespace.
