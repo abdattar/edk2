@@ -1,6 +1,7 @@
 #
 # Copyright (c) 2006 - 2016, Intel Corporation. All rights reserved.<BR>
 # Copyright (c) 2016, Linaro Ltd. All rights reserved.<BR>
+# Copyright (C) 2025 Advanced Micro Devices, Inc. All rights reserved.
 # SPDX-License-Identifier: BSD-2-Clause-Patent
 #
 # In Unix-like environment, the build tools's source is required and need to be compiled
