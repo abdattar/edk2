@@ -1,0 +1,28 @@
+## @file
+#  Google Test mocks for IpmiCommandLib
+#
+#  Copyright (C) 2026 Advanced Micro Devices, Inc. All rights reserved.
+#  SPDX-License-Identifier: BSD-2-Clause-Patent
+##
+
+[Defines]
+  INF_VERSION                    = 1.30
+  BASE_NAME                      = MockIpmiCommandLib
+  FILE_GUID                      = ca911e84-b0bd-4994-bbbf-b304ff8800d4
+  MODULE_TYPE                    = HOST_APPLICATION
+  VERSION_STRING                 = 1.0
+  LIBRARY_CLASS                  = IpmiCommandLib
+
+[Sources]
+  MockIpmiCommandLib.cpp
+
+[Packages]
+  MdePkg/MdePkg.dec
+  MdeModulePkg/MdeModulePkg.dec
+  UnitTestFrameworkPkg/UnitTestFrameworkPkg.dec
+
+[LibraryClasses]
+  GoogleTestLib
+
+[BuildOptions]
+  MSFT:*_*_*_CC_FLAGS = /EHsc
