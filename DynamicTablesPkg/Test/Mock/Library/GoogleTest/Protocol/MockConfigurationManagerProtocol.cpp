@@ -9,11 +9,12 @@
 
 MOCK_INTERFACE_DEFINITION (MockConfigurationManagerProtocol);
 MOCK_FUNCTION_DEFINITION (MockConfigurationManagerProtocol, GetObject, 4, EFIAPI);
+MOCK_FUNCTION_DEFINITION (MockConfigurationManagerProtocol, SetObject, 4, EFIAPI);
 
 EDKII_CONFIGURATION_MANAGER_PROTOCOL  CONFIG_MGR_PROTOCOL_INSTANCE = {
   CREATE_REVISION (1, 0), // Revision
   GetObject,              // GetObject
-  NULL,                   // SetObject
+  SetObject,              // SetObject
   NULL                    // PlatRepoInfo
 };
 
